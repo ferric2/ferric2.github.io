@@ -15,11 +15,13 @@
   line-height: 1.42857;
 }
 
-.btn-circle {
-
+i{
+  margin-right: 20px;
+  width: 12px;
+  height: 16px;
 }
-
-
 .google-1 {
   color: #17294b;
 }
+
+
