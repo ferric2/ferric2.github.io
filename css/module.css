@@ -24,4 +24,12 @@ i{
   color: #17294b;
 }
 
+#popup{
+  text-align: left;
+  background-color: white;
+  border-radius: 7px;
+  padding: 24px;
+  visibility: hidden;
+  
+}
 

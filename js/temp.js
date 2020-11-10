@@ -1,46 +1,29 @@
-var i=0;
-function expand(){
-  if(i==0){
-    document.getElementById("menu").style.transform="scale(3)"; 
-    document.getElementById("menu1").style.transform="scale(0)"; 
-    document.getElementById("menu2").style.transform="scale(0)"; 
-    document.getElementById("plus").style.transform="rotate(270deg)"; 
-    i=1;
-  }
-  else{   
-    document.getElementById("menu").style.transform="scale(0)"; 
-    document.getElementById("plus").style.transform="rotate(0deg)"; 
-    i=0;
-  }
+function setPopupVisibility(show){
+let popup = document.getElementById("popup");
+if(show == true){
+  popup.style.visibility = "visible";
 }
-let j=0;
-function expand1(){
-  if(j==0){
-    document.getElementById("menu1").style.transform="scale(3)"; 
-    document.getElementById("menu").style.transform="scale(0)"; 
-    document.getElementById("menu2").style.transform="scale(0)"; 
-    document.getElementById("plus1").style.transform="rotate(360deg)"; 
-    j=1;
-  }
-  else{   
-    document.getElementById("menu1").style.transform="scale(0)"; 
-    document.getElementById("plus1").style.transform="rotate(0deg)"; 
-    j=0;
-  }
+else{
+  popup.style.visibility = "hidden";
 }
 
-let k=0;
-function expand2(){
-  if(k==0){
-    document.getElementById("menu2").style.transform="scale(3)"; 
-    document.getElementById("menu1").style.transform="scale(0)"; 
-    document.getElementById("menu").style.transform="scale(0)"; 
-    document.getElementById("plus2").style.transform="rotate(360deg)"; 
-    k=1;
+}
+
+function make_a_folder(){
+  let name = document.getElementById("folder_name").value;
+  let trimName = name.trim();
+  if(trimName === ""){
+    alert("Please name the folder with letters or numbers");
   }
-  else{   
-    document.getElementById("menu2").style.transform="scale(0)"; 
-    document.getElementById("plus2").style.transform="rotate(0deg)"; 
-    k=0;
+  else{
+    alert(name + " created");
+    name = ' ';
+    setPopupVisibility(false);
   }
+  //need to fix error of the text not clearing after calling make_a_folder
+  name = ' ';
+}
+
+function user_effed_up(){
+  alert("Please select the appropriate button");
 }
