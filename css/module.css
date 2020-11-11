@@ -33,3 +33,58 @@ i{
   
 }
 
+#sharing{
+  text-align: left;
+  border-radius: 7px;
+  width: 100%;
+  visibility: hidden;
+}
+
+#share {
+  background-color: white;
+  border-radius: 7px;
+  padding: 10px;
+  width: 100%;
+}
+
+
+#link {
+  background-color: white;
+  border-radius: 7px;
+  width: 100%;
+}
+
+
+a.mbtn{
+    height:100px;
+    width: 50px;
+    line-height:50px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0 10px;
+    color:#ffffff;
+    background-color:#007bff;
+    position:relative;
+    display:inline-block;
+}
+a.mbtn:after{
+    position:absolute;
+    right:-20px;
+    content:" ";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 50px 0 50px 50px;
+    border-color: transparent transparent transparent #007bff;
+}
+a.mbtn:hover{
+    background-color:red;
+}
+a.mbtn:hover:after{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 25px 0 25px 20px;
+    border-color: transparent transparent transparent #ff0000;
+}
+
