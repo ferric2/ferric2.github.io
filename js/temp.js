@@ -231,18 +231,31 @@ function showCompletion(){
 //Module 4 JS
 
 function showStepTwoFourthModule() {
-  var icon = document.getElementById('steptwo');
+  var icon = document.getElementById('stepTwo');
   if (icon.classList.contains('collapse')) {
     $('#steptwo').toggleClass('collapse');
   }
 }
 
 function showStepThreeFourthModule() {
-  $('#stepthree').toggleClass('collapse');
+  var icon = document.getElementById('stepThree');
+  if (icon.classList.contains('collapse')) {
+    $('#stepThree').toggleClass('collapse');
+  }
 }
 
 
-
+function updateView(){
+  let list = document.getElementById('list');
+  list.innerHTML =  '<div id="dropDiv" ondrop="drop(event)" ondragover="allowDrop(event)" class="p-3" style="display: grid;">'+
+                    '<h5>Google Drive > GenED Courses</h5>'+
+                    '</div>'+
+                    '<hr class="m-0">'+
+                    '<a class="w-100 p-3" id="CS422Doc1"  href="#/" style="color: #5f6368;"><i class="fas fa-file-alt" style="color: rgb(17, 85, 204) !important;"></i>CS 422 Problem Statement</a>'+
+                    '<hr class="m-0">'+
+                    '<a class="w-100 p-3" id="CS474Doc1"  href="#/" style="color: #5f6368;"><i class="fas fa-file-alt" style="color: rgb(17, 85, 204) !important;"></i>CS 474 Project Proposal</a>';
+  showStepThreeFourthModule();
+}
 
 
 

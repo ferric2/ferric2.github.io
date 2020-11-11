@@ -132,35 +132,23 @@
       </div>
       <div class="col-6 pt-1 pb-1 pl-0 pr-0">
         <div class="card w-100 text-left" >
-          <ul class="list-group list-group-flush">
-            <ul class="list-group list-group-flush">
-              <div id="dropDiv" ondblclick="showStep" class="p-3" style="display: grid;">
-                <a class="w-100" id="GenEDFolder"  ondrop="return false;" href="#/" style="color: #5f6368;"><i class="fas fa-folder-plus"></i>GenED Courses</a>
+          <ul class="list-group list-group-flush" id="list">
+              <div id="stepInDiv" ondblclick="updateView()" class="p-3" style="display: grid;">
+                <a class="w-100" id="GenEDFolder"  ondblclick="updateView()" href="#/" style="color: #5f6368;"><i class="fas fa-folder-plus"></i>GenED Courses</a>
               </div>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="row pr-2 pl-2 collapse" style="text-align: center; visibility: hidden;" id="stepThree">
-      <div class="col-6 pt-1">
-        <h2 class="text-muted" href="#">3.</h2>
-        <p>
-          If in drive, right click on the item you wish to share and click the item that says share with the icon on the right.<br>
-        </p>
+    <div class="row pr-2 pl-2 collapse" style="text-align: center; background: #d9d9d9;" id="stepThree">
+      <div class="col-12 pt-2 pb-1"  style=" padding: 10%; ">
+        <h2 style="color: #4667af;" href="#">Good job!</h2>
+        <!--Only show this text if the user was successful in creating the folder, and then tell them to move on the next step.-->
+        <p>You moved items into a folder, you have reached the end.</p>
       </div>
-      <div class="col-6 pt-1 pb-1 pl-0 pr-0">
-        <div class="card w-100 text-left" >
-          <ul class="list-group list-group-flush">
-            <div id="dropDiv" ondrop="drop(event)" ondragover="allowDrop(event)" class="p-3" style="display: grid;">
-              <h5>Google Drive > GenED Courses</h5>
-            </div>
-            <hr class="m-0">
-            <a class="w-100 p-3" id="CS422Doc1"  href="#/" style="color: #5f6368;"><i class="fas fa-file-alt" style="color: rgb(17, 85, 204) !important;"></i>CS 422 Problem Statement</a>
-            <hr class="m-0">
-            <a class="w-100 p-3" id="CS474Doc1"  href="#/" style="color: #5f6368;"><i class="fas fa-file-alt" style="color: rgb(17, 85, 204) !important;"></i>CS 474 Project Proposal</a>
-          </ul>
-        </div>
+      <div class="col-6 pt-1">
+        <a class="text-muted" href="#"></a>
       </div>
     </div>
 
