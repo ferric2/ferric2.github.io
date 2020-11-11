@@ -30,11 +30,11 @@
     function allowDrop(ev) {
       ev.preventDefault();
     }
-    
+
     function drag(ev) {
       ev.dataTransfer.setData("text", ev.target.id);
     }
-    
+
     function drop(ev) {
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
@@ -51,6 +51,7 @@
 
 </head>
 
+
 <header class="blog-header py-3 p-0" style="background-color: #4667af;">
   <div class="row flex-nowrap justify-content-between align-items-center m-0">
 
@@ -58,30 +59,51 @@
       <a href="/index.html"> <i class="fa fa-home" style="font-size:30px; color: #fcbc03;"></i> </a>
     </div>
     <div class="col-4 text-center">
-      <a class="blog-header-logo text-dark" href="#"><img src="/images/logo3.svg" alt="HTML tutorial" style="max-height: 90px; max-width: 90px;"></a>
+      <a class="blog-header-logo text-dark" href="#"><img src="/images/logo3.svg" alt="HTML tutorial" style="max-height: 100px; max-width: 120px;"></a>
     </div>
-    <div class="col-4 d-flex justify-content-end align-items-center p-0">
-            <a class=" btn btn-sm btn-outline-secondary" href="#">Module Icon</a>
+    <div class="col-4 d-flex justify-content-end align-items-center pr-1">
+      <a href="#/"> <i class="fab fa-google-drive" style="font-size:30px; color: #fcbc03; padding-right: 20px;"></i> </a>
     </div>
   </div>
 </header>
 
-<body style="background-color: rgba(142, 168, 195, 0.3);">
+
+<body style="background-color: #E1E2E1;">
 
   <div class="container">
-    <h1 class="darkBlueText">Step 3: Sharing Your Items</h1>
-    <div class="row pr-2 pl-2">
-      <div class="col-12 pt-1 p-0">
+
+
+    <h1 class="darkBlueText" style="margin-top: 30px;">Tutorial 4: Moving items</h1>
+    <p style="margin-bottom: 5px;font-size: 20px;"> You can move an item from anywhere in Google Drive: the main window, the left panel, or search results. Here you will learn about moving files between folders.</p>
+
+    <h4 class="darkBlueText" style="margin-top: 20px;"> Drag to a folder </h4>
+    <p style="margin-bottom: 5px;font-size: 20px;"> With drag and drop it has never been easier to move files in your Drive. </p>
+
+
+
+
+    <div class="col-12 text-center pt-1 p-0" style="justify-content: center;">
+      <a class="btn btn-light shadow-none mb-1" id="Button" href="javascript:onCollapseMenu()" style="width: 100%;">
+        <span id="VideoText"> Hide video</span>
+        <i id="IconUpDown" class="fas fa-chevron-up "></i>
+      </a> </div>
+    <div class="row pt-1" id="video-div">
+
+      <div class="col-12 pt-1 p-0 pb-2">
         <div class="embed-responsive embed-responsive-21by9">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <div class="row pr-2 pl-2" style="text-align: center;">
-      <div class="col-6 pt-1">
+
+    <h2 class="darkBlueText" style="margin-bottom: 30px; text-align: center; background-color: #fcbc03; padding: 10px;">Steps (2)</h2>
+
+    <div class="row pr-2 pl-2" style="text-align: center; ">
+      <div class="col-6 pt-2 pb-2" style=" padding: 10%; ">
         <h2 class="text-muted" href="#">1.</h2>
-        <p>
-          If in drive, right click on the item you wish to share and click the item that says share with the icon on the right.<br>
+        <p style="text-align: left;">
+          Click and hold the item you want to move and then move the item over the folder and release it. For this example move both documents into
+          <span style="font-weight: bold;"> GenED Courses </span> folder.
         </p>
       </div>
       <div class="col-6 pt-1 pb-1 pl-0 pr-0">
@@ -98,11 +120,13 @@
         </div>
       </div>
     </div>
+    <br/>
+
 
     <div class="row pr-2 pl-2 collapse" style="text-align: center; visibility: hidden;" id="stepTwo" >
       <div class="col-6 pt-1">
         <h2 class="text-muted" href="#">2.</h2>
-        <p>
+        <p style="text-align: left;">
           If in drive, right click on the item you wish to share and click the item that says share with the icon on the right.<br>
         </p>
       </div>
@@ -140,22 +164,26 @@
       </div>
     </div>
 
+    <br/>
     <div class="row pr-2 pl-2" style="text-align: center; height: 10vh;">
       <div class="col-6 pt-1">
-          <a type="button" class="btn btn-danger w-100 h-100" href="thirdModule.html">Go Back</a>
+          <a type="button" class="btn btn-danger w-100 h-100" style="font-size: 25px;" href="thirdModule.html">Previous tutorial
+          <br/> <span style="font-size: 18px; color: #E1E2E1;"> (Sharing your items) </span>
+          </a>
       </div>
+
       <div class="col-6 pt-1">
-        <a type="button" class="btn btn-success w-100 h-100" href="fourthModule.html">Next</a>
+        <a type="button" class="btn btn-success w-100 h-100" style="font-size: 25px;" href="/index.html"> Next tutorial
+          <br/> <span style="font-size: 18px; color: #E1E2E1;"> (Return to home) </span>
+
+        </a>
+
       </div>
     </div>
-
     <div class="row pr-2 pl-2" style="text-align: center; height: 10vh;">
-      <div class="col-12 pt-1">
-        <a type="button" class="btn btn-warning w-100 h-100" href="fourthModule.html">Skip</a>
-      </div>
-    </div>
-</div>
 
+    </div>
+  </div>
 
   <!-- Bootstrap core JavaScript
     ================================================== -->

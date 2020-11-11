@@ -4,14 +4,14 @@
 function setPopupVisibility(show){
   let popup = document.getElementById('popup');
   let name = document.getElementById('folderName');
-  
+
   if(show == true){
     popup.style.visibility = 'visible';
     showStepTwoFirstModule();
     name.value= 'Untitled folder';
     name.focus();
     name.select();
-    
+
 
   }
   else{
@@ -50,14 +50,36 @@ function showStepThreeFirstModule() {
 
 //Module 2 JS
 
+function uploadFileOrFolder(){
+
+
+  showStepTwoSecondModule();
+
+}
+
+function showStepTwoSecondModule() {
+  var stepTwo = document.getElementById('steptwo');
+  if (stepTwo.classList.contains('collapse')) {
+    $('#steptwo').toggleClass('collapse');
+  }
+
+}
+
+function showStepThreeSecondModule() {
+  var stepThree = document.getElementById('stepthree');
+  if (stepThree.classList.contains('collapse')) {
+    $('#stepthree').toggleClass('collapse');
+  }
+}
+
 
 //Module 3 JS
 function setPopupVisibilityThirdModule(show){
   let stepTwo = document.getElementById('stepTwo');
   let popup = document.getElementById('popup');
-  
+
   if(show == true){
-    
+
     stepTwo.style.visibility = 'visible';
     popup.style.visibility = 'visible';
     showStepTwoThirdModule();
@@ -99,7 +121,7 @@ function showStepThreeThirdModule() {
 
 function mouseClick(ele, e) {
   if(e.type == 'click'){
-    alert('That was the incorrect button click') 
+    alert('That was the incorrect button click')
   }
   if(e.type == 'contextmenu'){
     e.preventDefault();
@@ -120,7 +142,7 @@ function addToList(){
   else{
     const listItem = document.createElement('li');
     listItem.classList= ['list-group-item'];
-    listItem.innerHTML= '<div>' + 
+    listItem.innerHTML= '<div>' +
                         '<h6>'+ name.value + '</h6>'+
                         '<p class="mb-0">anotherUser@email.com</p>'+
                         '</div>';
@@ -182,7 +204,7 @@ function createContextMenuPiece(ele){
   const popup = document.getElementById('popup');
   popup.innerHTML = contextMenu;
   setPopupVisibilityThirdModule(true);
- 
+
 }
 
 function checkForCompletion(){
@@ -258,13 +280,12 @@ function showStepTwo(show){
   let stepTwo = document.getElementById('stepTwo');
 
   $('#stepTwo').toggleClass('collapse');
-  
+
   if(show == true){
-    
+
     stepTwo.style.visibility = 'visible';
   }
   else{
     stepTwo.style.visibility = 'hidden';
   }
 }
-
