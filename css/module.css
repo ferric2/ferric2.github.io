@@ -13,7 +13,19 @@
   text-align: center;
   font-size: 12px;
   line-height: 1.42857;
+  
 }
+
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+  }
+
 
 i{
   margin-right: 20px;
@@ -28,6 +40,12 @@ i{
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
+}
+
+.btn-back1{
+  color: #fff !important;
+  background-color: #4667af !important;
+  border-color: #4667af !important;
 }
 
 #popup{

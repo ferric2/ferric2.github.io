@@ -1,5 +1,4 @@
 
-
 //Module 1 JS
 function setPopupVisibility(show){
   let popup = document.getElementById('popup');
@@ -234,7 +233,11 @@ function showStepTwoFourthModule() {
   var icon = document.getElementById('stepTwo');
   if (icon.classList.contains('collapse')) {
     $('#steptwo').toggleClass('collapse');
+    var firstDiv = document.getElementById('oldDragDiv');
+    firstDiv.style.visibility = 'hidden';
+
   }
+
 }
 
 function showStepThreeFourthModule() {
@@ -255,6 +258,7 @@ function updateView(){
                     '<hr class="m-0">'+
                     '<a class="w-100 p-3" id="CS474Doc1"  href="#/" style="color: #5f6368;"><i class="fas fa-file-alt" style="color: rgb(17, 85, 204) !important;"></i>CS 474 Project Proposal</a>';
   showStepThreeFourthModule();
+
 }
 
 
