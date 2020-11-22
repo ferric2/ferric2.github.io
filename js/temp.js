@@ -306,3 +306,4 @@ function showStepTwo(show){
     stepTwo.style.visibility = 'hidden';
   }
 }
+
