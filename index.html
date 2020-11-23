@@ -31,9 +31,9 @@
         <div class="row" style="justify-content: space-evenly;">
 
           <div class="col-lg-3 outline" >
-            <h3 style="color: #fcbc03; font-weight: bold;">Drive</h3>
+            <h3 style="color: #fcbc03; font-weight: bold; padding-top: 5vh; visibility: visible;" id="driveText">Drive</h3>
             <nav class="menu pt-3">
-              <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu1-open" />
+              <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu1-open" onchange="t1();"/>
               <label class="menu-open-button" for="menu1-open">
                 <i class="fab fa-google-drive" id="plus" style="color: #596778; font-size: 30px;"></i>
               </label>
@@ -47,11 +47,11 @@
           </nav>
         </div>
         <div class="col-lg-3 outline">
-          <h3 style="color: #fcbc03; font-weight: bold;">Gmail</h3>
+          <h3 style="color: #fcbc03; font-weight: bold; padding-top: 5vh; visibility: visible;" id="gmailText">Gmail</h3>
 
 
           <nav class="menu pt-3">
-            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu2-open" placeholder="Untitled folder"/>
+            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu2-open" onchange="t2();"/>
             <label class="menu-open-button" for="menu2-open">
               <i class="far fa-envelope" style="color: #596778; font-size: 30px;"></i>
             </label>
@@ -67,7 +67,10 @@
 
         </div>
 
+
+
       </div>
+        <br/>
     </div>
 
   </div>

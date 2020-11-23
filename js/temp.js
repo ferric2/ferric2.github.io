@@ -307,3 +307,25 @@ function showStepTwo(show){
   }
 }
 
+
+function t1() {
+
+  let elem = document.getElementById('driveText');
+  if (elem.style.visibility == 'visible') {
+    elem.style.visibility = 'hidden';
+  } else {
+    elem.style.visibility = 'visible';
+  }
+}
+
+
+
+function t2() {
+
+  let elem = document.getElementById('gmailText');
+  if (elem.style.visibility == 'visible') {
+    elem.style.visibility = 'hidden';
+  } else {
+    elem.style.visibility = 'visible';
+  }
+}
