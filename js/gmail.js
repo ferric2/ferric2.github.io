@@ -109,7 +109,7 @@ function showStepGmailFirstModule(stepId){
 
 
 function showSentMessages(){
-
+    $('#steptwo').toggleClass('collapse');
     const inboxDiv = document.getElementById('inbox');
 
         inboxDiv.innerHTML = '<div class="row">'+
@@ -135,6 +135,7 @@ function showSentMessages(){
 }
 
 function showNewInbox(){
+  $('#stepthree').toggleClass('collapse');
     const inboxDiv = document.getElementById('inbox');
     var d = new Date();
     var h =  d.getHours();
@@ -186,6 +187,7 @@ function showNewInbox(){
 }
 
 function readEmail(){
+  $('#stepfour').toggleClass('collapse');
     const inboxDiv = document.getElementById('inbox');
 
     inboxDiv.innerHTML =  inboxDiv.innerHTML = '<div class="row">'+
@@ -221,6 +223,7 @@ inboxList.innerHTML =   '<li class="list-group-item borderEmail customTextRed p-
 }
 
 function moveToTrash(){
+  $('#stepfive').toggleClass('collapse');
     const inboxDiv = document.getElementById('inbox');
     inboxDiv.innerHTML =  inboxDiv.innerHTML = '<div class="row">'+
     '<div class="col-4 p-1 customTextRed">'+
@@ -255,6 +258,7 @@ function moveToTrash(){
 }
 
 function showTrash(){
+  $('#stepsix').toggleClass('collapse');
   const inboxDiv = document.getElementById('inbox');
   var d = new Date();
   var h =  d.getHours();
@@ -286,7 +290,7 @@ function showTrash(){
   '</div>';
 
 const inboxList = document.getElementById('inboxList');
-inboxList.innerHTML =   '<li class="list-group-item borderEmail p-1 pl-4"><i  class="fas fa-inbox"></i><strong>Inbox</strong></li></a>'+
+inboxList.innerHTML =   '<li class="list-group-item borderEmail p-1 pl-4"><i style="color: gray" class="fas fa-inbox"></i>Inbox</li></a>'+
                       '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-star"></i></i>Starred</li>'+
                       '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-clock"></i>Snoozed</li>'+
                       '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-angle-double-right"></i>Important</li>'+
