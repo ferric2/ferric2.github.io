@@ -102,3 +102,149 @@ function showStepGmailFirstModule(stepId){
       stepSix.style.visibility = 'hidden';
     }
   }
+
+  //Js for tutorial 3
+
+
+
+
+function showSentMessages(){
+
+    const inboxDiv = document.getElementById('inbox');
+
+        inboxDiv.innerHTML = '<div class="row">'+
+        '</div>'+
+        '<div class="row">'+
+        '<div class="col p-0">'+
+        '<div class="card" style="border: none;">'+
+        '<ul class="list-group list-group-flush">'+
+        '<li class="list-group-item"><p>To: GWHELP</p></li>'
+        '</ul>'+
+        '</div>'+
+        '</div>'+
+        '</div>';
+
+    const inboxList = document.getElementById('inboxList');
+    inboxList.innerHTML =   '<a onclick="showNewInbox()"><li class="list-group-item borderEmail p-1 pl-4" style="color: black" ><i style="color: gray" class="fas fa-inbox"></i><strong>Inbox &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</strong></li></a>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-star"></i></i>Starred</li>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-clock"></i>Snoozed</li>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-angle-double-right"></i>Important</li>'+
+                            '<li class="list-group-item borderEmail p-1 pl-4 customTextGray"><i style="color: gray" class="fas fa-paper-plane"></i><strong>Sent</strong></li></a>'+
+                            '<li class="list-group-item borderEmail p-1 pl-4"><i style="color: gray" class="fas fa-trash"></i>Trash</li>';
+
+}
+
+function showNewInbox(){
+    const inboxDiv = document.getElementById('inbox');
+    var d = new Date();
+    var h =  d.getHours();
+    var m =  d.getMinutes();
+    var time = '';
+    if(h > 12){
+        time = h-12 + ':' + m +'pm';
+    }
+    else{
+        time = h + ':' + m + 'am';
+    }
+   
+
+
+        inboxDiv.innerHTML =  inboxDiv.innerHTML = '<div class="row">'+
+        '<div class="col-4 p-1 customTextRed">'+
+        '<i  class="fas fa-inbox"></i><strong>Primary</strong>'+
+        '</div>'+
+        '<div class="col-4 p-1">'+
+        '<i class="fas fa-users"></i></i><strong>Social</strong>'+
+        '</div>'+
+        '<div class="col-4 p-1">'+
+        '<i class="fas fa-tag"></i><strong>Promotions</strong>'+
+        '</div>'+
+        '</div>'+
+        '<div class="row">'+
+        '<div class="col p-0">'+
+        '<div class="card" style="border: none;">'+
+        '<ul class="list-group list-group-flush">'+
+        '<a onclick="readEmail()"><li class="list-group-item"><strong>Joe &nbsp;&nbsp;Happy Thanksgiving&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+ time +'</strong></li></a>'+
+        '</ul>'+
+        '</div>'+
+        '</div>'+
+        '</div>';
+
+    const inboxList = document.getElementById('inboxList');
+    inboxList.innerHTML =   '<a onclick="showNewInbox()"><li class="list-group-item borderEmail customTextRed p-1 pl-4"><i  class="fas fa-inbox"></i><strong>Inbox &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</strong></li></a>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-star"></i></i>Starred</li>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-clock"></i>Snoozed</li>'+
+                            '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-angle-double-right"></i>Important</li>'+
+                            '<li class="list-group-item borderEmail p-1 pl-4 "><i style="color: gray" class="fas fa-paper-plane"></i>Sent</li></a>'+
+                            '<li class="list-group-item borderEmail p-1 pl-4"><i style="color: gray" class="fas fa-trash"></i>Trash</li>';
+}
+
+function readEmail(){
+    const inboxDiv = document.getElementById('inbox');
+
+    inboxDiv.innerHTML =  inboxDiv.innerHTML = '<div class="row">'+
+    '<div class="col-4 p-1 customTextRed">'+
+    '<i  class="fas fa-inbox"></i><strong>Primary</strong>'+
+    '</div>'+
+    '<div class="col-4 p-1">'+
+    '<i class="fas fa-users"></i></i><strong>Social</strong>'+
+    '</div>'+
+    '<div class="col-4 p-1">'+
+    '<i class="fas fa-tag"></i><strong>Promotions</strong>'+
+    '</div>'+
+    '</div>'+
+    '<div class="row">'+
+    '<div class="col p-0">'+
+    '<div class="card" style="border: none;">'+
+    '<ul class="list-group list-group-flush">'+
+    '<li class="list-group-item">Joe &nbsp;&nbsp;Happy Thanksgiving&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title="archive" class="fas fa-archive"></i><a onclick="moveToTrash()" title="Delete"><i style="color: black float:right;" class="fas fa-trash"></i></a><i title="Mark as unread" class="fas fa-envelope-open-text"></i><i class="fas fa-clock"></li>'
+    '</ul>'+
+    '</div>'+
+    '</div>'+
+    '</div>';
+
+const inboxList = document.getElementById('inboxList');
+inboxList.innerHTML =   '<li class="list-group-item borderEmail customTextRed p-1 pl-4"><i  class="fas fa-inbox"></i><strong>Inbox</strong></li></a>'+
+                        '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-star"></i></i>Starred</li>'+
+                        '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-clock"></i>Snoozed</li>'+
+                        '<li class="list-group-item borderEmail p-1  pl-4"><i style="color: gray" class="fas fa-angle-double-right"></i>Important</li>'+
+                        '<li class="list-group-item borderEmail p-1 pl-4 "><i style="color: gray" class="fas fa-paper-plane"></i>Sent</li></a>'+
+                        '<li class="list-group-item borderEmail p-1 pl-4"><i style="color: gray" class="fas fa-trash"></i>Trash</li>';
+
+
+}
+
+function moveToTrash(){
+    const inboxDiv = document.getElementById('inbox');
+    inboxDiv.innerHTML =  inboxDiv.innerHTML = '<div class="row">'+
+    '<div class="col-4 p-1 customTextRed">'+
+    '<i  class="fas fa-inbox"></i><strong>Primary</strong>'+
+    '</div>'+
+    '<div class="col-4 p-1">'+
+    '<i class="fas fa-users"></i></i><strong>Social</strong>'+
+    '</div>'+
+    '<div class="col-4 p-1">'+
+    '<i class="fas fa-tag"></i><strong>Promotions</strong>'+
+    '</div>'+
+    '</div>'+
+    '<div class="row">'+
+    '<div class="col p-0">'+
+    '<div class="card" style="border: none;">'+
+    '<ul class="list-group list-group-flush">'+
+    '<div class="p-4" style="text-align: center;">'+
+    'No new messages'+
+    '</div>'+
+    '</ul>'+
+    '</div>'+
+    '</div>'+
+    '</div>';
+}
+
+function showSuccessT2(){
+    let stepThree = document.getElementById('stepthree');
+    $('#stepthree').toggleClass('collapse');
+}
+
+function showStepTwoT2() {
+  $('#steptwo').toggleClass('collapse');
+}
