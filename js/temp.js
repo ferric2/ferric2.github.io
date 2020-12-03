@@ -65,6 +65,7 @@ function showStepTwoSecondModule() {
 }
 
 function showStepThreeSecondModule() {
+  alert('Your file has been uploaded.')
   var stepThree = document.getElementById('stepthree');
   if (stepThree.classList.contains('collapse')) {
     $('#stepthree').toggleClass('collapse');

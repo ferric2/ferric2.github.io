@@ -148,7 +148,7 @@ function showNewInbox(){
       time = (h+12) + ':' + m +'am';
     }
     else if(h > 12){
-        time = h + ':' + m +'pm';
+        time = (h-12) + ':' + m +'pm';
     }
     else{
         time = h + ':' + m + 'am';
@@ -205,7 +205,9 @@ function readEmail(){
     '<div class="col p-0">'+
     '<div class="card" style="border: none;">'+
     '<ul class="list-group list-group-flush">'+
-    '<li class="list-group-item">Joe &nbsp;&nbsp;Happy Thanksgiving&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title="archive" class="fas fa-archive"></i><a onclick="moveToTrash()" title="Delete"><i style="color: black float:right;" class="fas fa-trash"></i></a><i title="Mark as unread" class="fas fa-envelope-open-text"></i><i class="fas fa-clock"></li>'
+    '<li class="list-group-item"><i title="archive" class="fas fa-archive"></i><a onclick="moveToTrash()" title="Delete"><i style="color: black float:right;" class="fas fa-trash"></i></a><i title="Mark as unread" class="fas fa-envelope-open-text"></i><i class="fas fa-clock"></i></li>'+
+    '<li class="list-group-item">Joe &nbsp;&nbsp;Happy Thanksgiving&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
+    '<li class="list-group-item"><p class="mb-1">Happy Thanksgiving! I appreciate you so much for making our office a fun, fantastic, and encouraging place to work. Have a blessed weekend with your family, filled with good food and laughter! Although you\'re always thanking us for our work, it\'s our turn to say thank you and Happy Thanksgiving.</p></li>'+
     '</ul>'+
     '</div>'+
     '</div>'+
@@ -271,7 +273,7 @@ function showTrash(){
     time = (h+12) + ':' + m +'am';
   }
   else if(h > 12){
-      time = h + ':' + m +'pm';
+      time = (h-12) + ':' + m +'pm';
   }
   else{
       time = h + ':' + m + 'am';
